@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
 export default function Navbar() {
   return (
@@ -27,9 +26,16 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="navbar-end">
-        <button className="btn btn-primary">
-          Sign in with Google
-        </button>
+      <form
+            action={async () => {
+              "use server";
+              await signIn("google", { redirectTo: "/dashboard" });
+            }}
+          >
+            <button type="submit" className="btn btn-primary ">
+              Войти с Google
+            </button>
+          </form>
       </div>
     </div>
   )

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { signIn } from "@/auth";
 import Image from "next/image";
 
@@ -20,15 +19,15 @@ export default function Hero() {
               Jol
             </span>
           </h1>
-          <p className="py-6">Сделай свою поездку незабываемой</p>
+          <p className="py-6">Туристический сервис, который поможет вам сделать свою поездку незабываемой.</p>
           <form
             action={async () => {
               "use server";
               await signIn("google", { redirectTo: "/dashboard" });
             }}
           >
-            <button type="submit" className="btn btn-primary">
-              Get Started
+            <button type="submit" className="btn btn-primary ">
+              Начать свою поездку
             </button>
           </form>
         </div>

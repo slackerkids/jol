@@ -4,19 +4,19 @@ export default function Footer() {
   return (
     <footer className="footer p-10 bg-neutral text-neutral-content">
       <div>
-        <span className="footer-title">Company</span>
-        <Link href="/about" className="link link-hover">About us</Link>
-        <Link href="/contact" className="link link-hover">Contact</Link>
-        <Link href="/careers" className="link link-hover">Careers</Link>
+        <span className="footer-title">Компания</span>
+        <Link href="/about" className="link link-hover">О нас</Link>
+        <Link href="/contact" className="link link-hover">Контакты</Link>
+        <Link href="/careers" className="link link-hover">Карьера</Link>
       </div>
       <div>
-        <span className="footer-title">Legal</span>
-        <Link href="/terms" className="link link-hover">Terms of use</Link>
-        <Link href="/privacy" className="link link-hover">Privacy policy</Link>
-        <Link href="/cookie" className="link link-hover">Cookie policy</Link>
+        <span className="footer-title">Правовая информация</span>
+        <Link href="/terms" className="link link-hover">Условия использования</Link>
+        <Link href="/privacy" className="link link-hover">Политика конфиденциальности</Link>
+        <Link href="/cookie" className="link link-hover">Политика Cookie</Link>
       </div>
       <div>
-        <span className="footer-title">Social</span>
+        <span className="footer-title">Социальные сети</span>
         <div className="grid grid-flow-col gap-4">
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current">
