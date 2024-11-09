@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="hero bg-white min-h-screen">
+    <div className="hero bg-white min-h-[80vh]">
       <div className="hero-content flex-col lg:flex-row gap-20">
         <Image
           src="/images/hero.jpg"
