@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    font-family: 
+      -apple-system, /* SF Pro on Apple devices */
+      BlinkMacSystemFont, /* Safari fallback */
+      "Segoe UI", /* Windows */
+      Roboto, /* Android */
+      "Helvetica Neue", /* Older Mac fallback */
+      Arial, /* Universal fallback */
+      sans-serif;
+}
