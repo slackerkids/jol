@@ -28,7 +28,7 @@ module.exports = {
           "base-content": "#1f2937", // Gray-800 text
           
           "--rounded-box": "0.5rem",
-          "--rounded-btn": "9999px",
+          "--rounded-btn": "2rem",
           "--rounded-badge": "9999px",
           "--animation-btn": "0.25s",
           "--animation-input": "0.2s",
