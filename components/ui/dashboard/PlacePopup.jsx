@@ -55,7 +55,7 @@ export default function PlaceModal({ place, onClose }) {
               <div className="space-y-3 mb-6">
                 <h2 className="text-xl font-semibold flex items-center gap-2">
                   <Navigation className="w-5 h-5" />
-                  Location
+                  Локация
                 </h2>
                 <div className="w-full h-[300px] rounded-lg overflow-hidden shadow-md">
                   <iframe
@@ -77,7 +77,7 @@ export default function PlaceModal({ place, onClose }) {
               <div className="space-y-3 mb-6">
                 <h2 className="text-xl font-semibold flex items-center gap-2">
                   <MapPin className="w-5 h-5" />
-                  Navigation Apps
+                  Карты
                 </h2>
                 <div className="flex flex-wrap gap-2">
                   {place.mapsLinks?.google && (
