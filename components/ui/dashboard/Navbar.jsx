@@ -1,7 +1,10 @@
-import { signOut } from "@/auth";
+import { signOut, auth } from "@/auth";
 import Link from 'next/link';
 
-export default function DashboardNavbar() {
+
+export default async function DashboardNavbar() {
+  const session = await auth();
+
   return (
     <div className="navbar bg-base-100 border-b">
       <div className="navbar-start">
@@ -23,9 +26,13 @@ export default function DashboardNavbar() {
         <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
-              <div className="bg-primary text-white w-full h-full flex items-center justify-center">
-                U
-              </div>
+              {session?.user?.image ? (
+                <img src={session.user.image} alt="User Avatar" className="w-full h-full rounded-full" />
+              ) : (
+                <div className="bg-primary text-white w-full h-full flex items-center justify-center">
+                  U
+                </div>
+              )}
             </div>
           </div>
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
