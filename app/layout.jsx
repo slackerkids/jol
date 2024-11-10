@@ -1,3 +1,4 @@
+import ChatbotButton from "@/components/ui/ChatbotButton";
 import "../styles/globals.css";
 
 export const metadata = {
@@ -10,6 +11,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {children}
+        <ChatbotButton/>
       </body>
     </html>
   );
