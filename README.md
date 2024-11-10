@@ -34,6 +34,8 @@ Jol - это туристический сервис, который помог�
    NEXTAUTH_URL=http://localhost:3000
    GOOGLE_CLIENT_ID=ваш_google_client_id
    GOOGLE_CLIENT_SECRET=ваш_google_client_secret
+   MONGODB_URI=ваш_mongodb_ключ
+   AUTH_SECRET=сгенерированный_код_для_authjs
    ```
 
 5. Запустите приложение:
