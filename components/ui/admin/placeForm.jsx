@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 
 export default function PlaceForm() {
@@ -8,6 +8,7 @@ export default function PlaceForm() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
+  const formRef = useRef(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,7 +16,7 @@ export default function PlaceForm() {
     setError('');
     setSuccess(false);
 
-    const formData = new FormData(e.currentTarget);
+    const formData = new FormData(e.target);
     
     const data = {
       name: formData.get('name'),
@@ -43,7 +44,7 @@ export default function PlaceForm() {
 
       setSuccess(true);
       router.refresh();
-      e.currentTarget.reset();
+      formRef.current?.reset();
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Something went wrong');
     } finally {
@@ -52,7 +53,7 @@ export default function PlaceForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 max-w-2xl mx-auto p-4">
+    <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 max-w-2xl mx-auto p-4">
       <h2 className="text-2xl font-bold mb-6">Создать новое место</h2>
       
       {error && (
@@ -176,3 +177,5 @@ export default function PlaceForm() {
     </form>
   );
 } 
+
+
