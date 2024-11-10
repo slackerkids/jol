@@ -1,4 +1,4 @@
-import PlaceForm from "../../components/ui/admin/placeForm";
+import PlaceForm from "../../components/ui/admin/PlaceForm";
 
 export default function AdminPage() {
   return (
