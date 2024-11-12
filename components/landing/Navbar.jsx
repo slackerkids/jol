@@ -12,7 +12,7 @@ export default function Navbar() {
             </svg>
           </div>
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-            <li><Link href="#features">Features</Link></li>
+            <li><Link href="#features">Возможности</Link></li>
             <li><Link href="#cta">CTA</Link></li>
           </ul>
         </div>
